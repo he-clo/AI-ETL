@@ -85,6 +85,15 @@ ALTER TABLE movie ADD CONSTRAINT uk_movie_title UNIQUE (title);
             没有规划好类 导致多个类循环依赖 改为lazy懒加载
             AdvisorCall获取不到返回值 通过提示词要求返回原值 并再过一遍LLM回复用户偏好语言 或者通过手动调mcp工具获取原值 但是不能模糊匹配用户偏好
 
+时序图
+<img width="4080" height="3060" alt="1782721497268" src="https://github.com/user-attachments/assets/a12ec71f-a714-441f-9525-ef7ef4bb3c2c" />
+
+
+架构图
+<img width="4080" height="3060" alt="1782721497233(1)" src="https://github.com/user-attachments/assets/3854d656-a7ca-4444-b710-b71349f229e8" />
+
+
+
 展望:
       通过设置偏移值实现让LLM翻页搜索的功能
       维护用户偏好标题链和用户向量 实现用户的持久化 (但是会增加写操作,所以要引入redis缓冲)
